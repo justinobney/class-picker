@@ -1,7 +1,9 @@
 import { useState } from "react";
-import type { Student, Band, DomainKey } from "@/types";
+import type { Student, Band, DomainKey, InterestKey } from "@/types";
 import { domains } from "@/data/domains";
+import { interests as interestData } from "@/data/interests";
 import { DOMAIN_KEYS } from "@/types";
+import { cn } from "@/lib/utils";
 import {
   Dialog,
   DialogContent,
@@ -37,6 +39,15 @@ export function StudentEditor({ open, onOpenChange, student, onSave }: StudentEd
     student?.homeCoverage ?? {}
   );
   const [maxPicks, setMaxPicks] = useState(student?.maxPicks ?? 3);
+  const [selectedInterests, setSelectedInterests] = useState<InterestKey[]>(
+    student?.interests ?? []
+  );
+
+  function toggleInterest(key: InterestKey) {
+    setSelectedInterests((prev) =>
+      prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]
+    );
+  }
 
   function handleSave() {
     if (!name.trim()) return;
@@ -48,6 +59,7 @@ export function StudentEditor({ open, onOpenChange, student, onSave }: StudentEd
       homeCurriculumLabel: curriculumLabel.trim(),
       previousClasses: student?.previousClasses ?? [],
       maxPicks,
+      interests: selectedInterests,
     });
     onOpenChange(false);
   }
@@ -100,6 +112,26 @@ export function StudentEditor({ open, onOpenChange, student, onSave }: StudentEd
               onChange={(e) => setCurriculumLabel(e.target.value)}
               placeholder="e.g. TGATB Level 4"
             />
+          </div>
+          <div>
+            <Label className="mb-2 block">What does {name || "this child"} enjoy?</Label>
+            <div className="flex flex-wrap gap-1.5">
+              {interestData.map((interest) => (
+                <button
+                  key={interest.key}
+                  type="button"
+                  onClick={() => toggleInterest(interest.key)}
+                  className={cn(
+                    "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium transition-colors",
+                    selectedInterests.includes(interest.key)
+                      ? "bg-rose-100 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300 ring-1 ring-rose-300 dark:ring-rose-700"
+                      : "bg-secondary text-muted-foreground hover:bg-secondary/80"
+                  )}
+                >
+                  {interest.emoji} {interest.label}
+                </button>
+              ))}
+            </div>
           </div>
           <div>
             <Label className="mb-2 block">Home Coverage (0-5 per domain)</Label>

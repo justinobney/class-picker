@@ -10,6 +10,7 @@ export const classes: CoopClass[] = [
     style: "Structured curriculum",
     description: "Marine biology — whales, seals, sharks, crustaceans, mollusks. Hands-on experiments. 14-lesson series.",
     stepsUpFrom: ["Magic School Bus Science"],
+    interests: ["animals", "experiments", "exploring"],
   },
   {
     name: "Apologia Zoology 3",
@@ -19,6 +20,7 @@ export const classes: CoopClass[] = [
     style: "Structured curriculum",
     description: "Land animals — wild animals, livestock, crawling creatures. Habitats and ecosystems. 14-lesson series.",
     stepsUpFrom: ["Magic School Bus Science"],
+    interests: ["animals", "experiments", "outdoors"],
   },
   {
     name: "Magic School Bus Science",
@@ -27,6 +29,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Episodes + projects",
     description: "Variety of topics from space to human body. STEM project each class.",
+    interests: ["experiments", "exploring", "building"],
   },
   {
     name: "Unusual Animals",
@@ -35,6 +38,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Fun/exploratory",
     description: "Narwhals, platypuses, molting lizards — the weird stuff. Fun facts and discussion.",
+    interests: ["animals", "exploring"],
   },
   {
     name: "Plants/Gardening",
@@ -43,6 +47,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Hands-on",
     description: "Parts of a plant, microscope work, grow easy plants to take home.",
+    interests: ["outdoors", "experiments", "exploring"],
   },
   {
     name: "Nature Study/Plants",
@@ -51,6 +56,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Observational",
     description: "Louisiana flora and fauna, seasonal study. Charlotte Mason-inspired nature journaling.",
+    interests: ["outdoors", "exploring", "art"],
   },
   {
     name: "Geology",
@@ -59,6 +65,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Continuation",
     description: "Earth science deep dive — rocks, minerals, plate tectonics, volcanoes. Requires 1st year.",
+    interests: ["experiments", "outdoors", "exploring"],
   },
   {
     name: "Bugs/Entomology",
@@ -67,6 +74,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Exploratory",
     description: "Insect identification, life cycles, habitats, fun facts. Hands-on observation.",
+    interests: ["animals", "outdoors", "exploring"],
   },
   {
     name: "All About Animals/Animal Science",
@@ -75,6 +83,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Survey",
     description: "Domestic to wild, farm to working animals — terrestrial focus. Broad animal kingdom survey.",
+    interests: ["animals", "exploring"],
   },
   {
     name: "Dogs",
@@ -83,6 +92,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Niche",
     description: "All about dogs — breeds, care, training, anatomy. Great entry-level animal science.",
+    interests: ["animals"],
   },
   {
     name: "Human Anatomy & Health",
@@ -91,6 +101,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Labs + activities",
     description: "Cells, DNA, organs, body systems. Lab activities and hands-on exploration.",
+    interests: ["experiments", "exploring"],
   },
   {
     name: "Vet Academy",
@@ -100,6 +111,7 @@ export const classes: CoopClass[] = [
     style: "Hands-on simulation",
     description: "Suturing, diagnosing, lab work, reading scans — plays vet for real. Advanced animal science.",
     stepsUpFrom: ["Dogs", "All About Animals/Animal Science"],
+    interests: ["animals", "experiments", "building"],
   },
   {
     name: "STEM",
@@ -108,6 +120,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Build projects",
     description: "Build radios, speakers, flashlights, castles. Physical science + engineering hands-on.",
+    interests: ["building", "experiments"],
   },
   {
     name: "Weird, But True",
@@ -116,6 +129,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Books + experiments",
     description: "National Geographic series — experiments with weird things. Fun science facts.",
+    interests: ["experiments", "reading", "exploring"],
   },
   {
     name: "Health & Fitness/Nutrition",
@@ -124,6 +138,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "science",
     style: "Lesson + activity",
     description: "Healthy eating + physical activity combo. Nutrition science meets movement.",
+    interests: ["cooking", "sports"],
   },
 
   // === SOCIAL STUDIES & CULTURE ===
@@ -134,6 +149,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "socialStudies",
     style: "Cultural exploration",
     description: "Country focus each week: music, food, culture, dress, geography.",
+    interests: ["exploring", "cooking", "music"],
   },
   {
     name: "Geography — 50 State Roadtrip",
@@ -142,6 +158,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "socialStudies",
     style: "US geography",
     description: "Landmarks, capitals, wacky laws, trivia, creative projects. Tour the USA.",
+    interests: ["exploring", "history", "art"],
   },
   {
     name: "Holidays Year Round",
@@ -150,6 +167,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "socialStudies",
     style: "Cultural + crafts",
     description: "Holidays from around the world — stories, music, crafts, food.",
+    interests: ["art", "cooking", "exploring"],
   },
   {
     name: "Portraits of History",
@@ -158,6 +176,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "socialStudies",
     style: "Weekly spotlight",
     description: "Historical figures who made impacts. Biography-driven history.",
+    interests: ["history", "reading"],
   },
   {
     name: "Bible Stories",
@@ -166,6 +185,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "socialStudies",
     style: "Read + sing",
     description: "Bible stories with correlating songs. Faith-based learning.",
+    interests: ["faith", "music", "reading"],
   },
   {
     name: "Missionaries",
@@ -174,6 +194,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "socialStudies",
     style: "Read-aloud series",
     description: "Christian Heroes series — missionaries across time and geography.",
+    interests: ["faith", "reading", "history", "exploring"],
   },
   {
     name: "Egyptian History",
@@ -182,6 +203,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "socialStudies",
     style: "Hands-on history",
     description: "Pyramids, mummification, hieroglyphics — with Bible connections.",
+    interests: ["history", "art", "faith", "exploring"],
   },
   {
     name: "Countries in Asia",
@@ -190,6 +212,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "socialStudies",
     style: "Charlotte Mason style",
     description: "Geography, cuisine, language, culture of Asian countries.",
+    interests: ["exploring", "cooking", "history"],
   },
   {
     name: "Beginning German",
@@ -198,6 +221,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "socialStudies",
     style: "Language intro",
     description: "German language basics + culture and geography.",
+    interests: ["exploring", "games"],
   },
 
   // === CREATIVE ARTS ===
@@ -209,6 +233,7 @@ export const classes: CoopClass[] = [
     style: "Studio",
     description: "Various mediums and famous artists. Technique and art history.",
     stepsUpFrom: ["One Hour Crafts", "Play-dough Art"],
+    interests: ["art"],
   },
   {
     name: "Watercolor",
@@ -218,6 +243,7 @@ export const classes: CoopClass[] = [
     style: "Technique-focused",
     description: "Loose watercolor — color theory, brush strokes, paper selection.",
     stepsUpFrom: ["One Hour Crafts", "Play-dough Art"],
+    interests: ["art"],
   },
   {
     name: "One Hour Crafts",
@@ -226,6 +252,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "creativeArts",
     style: "Weekly project",
     description: "New craft each week — various mediums, time management.",
+    interests: ["art", "building"],
   },
   {
     name: "Play-dough Art",
@@ -234,6 +261,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "creativeArts",
     style: "Story + create",
     description: "Story then correlating playdough activity. Creative expression for young learners.",
+    interests: ["art", "reading"],
   },
   {
     name: "History of Music/Music Appreciation",
@@ -242,6 +270,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "creativeArts",
     style: "Listening + learning",
     description: "Composers, styles, eras, instruments — a global musical journey.",
+    interests: ["music", "history"],
   },
   {
     name: "Singing/Choir",
@@ -250,6 +279,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "creativeArts",
     style: "Performance",
     description: "Group singing techniques, hymns, folk songs. Build confidence performing.",
+    interests: ["music", "performing"],
   },
   {
     name: "Tea & Poetry",
@@ -258,6 +288,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "creativeArts",
     style: "Read + enjoy",
     description: "Poetry from various authors + tea + treats + occasional craft.",
+    interests: ["reading", "art"],
   },
   {
     name: "Drama",
@@ -267,6 +298,7 @@ export const classes: CoopClass[] = [
     style: "Reader's theatre",
     description: "Scripts, fluency, delivery — quarterly performances to co-op.",
     stepsUpFrom: ["Tea & Poetry"],
+    interests: ["performing", "reading"],
   },
   {
     name: "Creative Writing",
@@ -276,6 +308,7 @@ export const classes: CoopClass[] = [
     style: "Workshop",
     description: "Explore styles and genres, no grammar pressure. Free expression.",
     stepsUpFrom: ["Tea & Poetry"],
+    interests: ["reading", "art", "exploring"],
   },
   {
     name: "Home Furniture/Decor Making",
@@ -284,6 +317,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "creativeArts",
     style: "Build + design",
     description: "Miniature furniture and decor — shape, color, texture. Hands-on design.",
+    interests: ["building", "art"],
   },
 
   // === PHYSICAL & MOVEMENT ===
@@ -294,6 +328,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "physical",
     style: "Free play",
     description: "Run, jump, play — student-led activities, socializing.",
+    interests: ["sports", "outdoors", "games"],
   },
   {
     name: "PE",
@@ -302,6 +337,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "physical",
     style: "Structured fitness",
     description: "Strength, speed, balance, agility courses, obstacle challenges.",
+    interests: ["sports", "outdoors"],
   },
   {
     name: "Sports: History and Play",
@@ -310,6 +346,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "physical",
     style: "Learn + play",
     description: "History of a sport, rules, then play it — one sport per month.",
+    interests: ["sports", "history", "games"],
   },
 
   // === COMMUNICATION & SOCIAL SKILLS ===
@@ -320,6 +357,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "communication",
     style: "Role-play",
     description: "Scripts, scenarios, real-life examples — handling tricky social situations.",
+    interests: ["performing", "games"],
   },
   {
     name: "Social Emotional Learning",
@@ -328,6 +366,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "communication",
     style: "Discussion + games",
     description: "Emotional awareness, self-regulation, empathy, kindness.",
+    interests: ["games"],
   },
   {
     name: "Public Speaking",
@@ -337,6 +376,7 @@ export const classes: CoopClass[] = [
     style: "Progressive",
     description: "Games to comfort to simple speeches/presentations. Confidence building.",
     stepsUpFrom: ["Modern Manners"],
+    interests: ["performing"],
   },
   {
     name: "Christ-centered Self Development",
@@ -346,6 +386,7 @@ export const classes: CoopClass[] = [
     style: "Bible-based",
     description: "Bible reflections, communication, emotion regulation, friendships.",
     stepsUpFrom: ["Social Emotional Learning"],
+    interests: ["faith"],
   },
   {
     name: "Dr. Seuss is on the Loose",
@@ -354,6 +395,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "communication",
     style: "Read-aloud",
     description: "Listening, learning, and reading turns — movement and silliness.",
+    interests: ["reading", "performing"],
   },
 
   // === LIFE SKILLS & HANDS-ON ===
@@ -364,6 +406,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "lifeSkills",
     style: "Kitchen",
     description: "Measuring, dough, baking, decorating — eat your creation.",
+    interests: ["cooking"],
   },
   {
     name: "Cooking Around the World",
@@ -372,6 +415,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "lifeSkills",
     style: "Cultural kitchen",
     description: "International recipes — cooking meets geography and culture.",
+    interests: ["cooking", "exploring"],
   },
   {
     name: "LEGOs",
@@ -380,6 +424,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "lifeSkills",
     style: "Building",
     description: "Construction, spatial reasoning, creativity. Free-build and challenges.",
+    interests: ["building", "games"],
   },
   {
     name: "Maker's Space",
@@ -388,6 +433,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "lifeSkills",
     style: "Unstructured",
     description: "Free creativity with many materials. Open-ended exploration and building.",
+    interests: ["building", "art", "exploring"],
   },
   {
     name: "Math Games",
@@ -396,6 +442,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "lifeSkills",
     style: "Games",
     description: "Counting, clocks, addition, subtraction through dice, cards, LEGOs.",
+    interests: ["games"],
   },
   {
     name: "Math Games/Multiplication",
@@ -405,6 +452,7 @@ export const classes: CoopClass[] = [
     style: "Games",
     description: "Math facts + multiplication memorization tricks. Fun drill format.",
     stepsUpFrom: ["Math Games"],
+    interests: ["games"],
   },
   {
     name: "Focus/Problem Solving/Life Skills",
@@ -413,6 +461,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "lifeSkills",
     style: "Brain training",
     description: "How the brain works, tangrams, memory, executive functioning.",
+    interests: ["games", "experiments"],
   },
   {
     name: "Board Games",
@@ -421,6 +470,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "lifeSkills",
     style: "Strategic play",
     description: "Classic games + history + sportsmanship. Strategy and social skills.",
+    interests: ["games", "history"],
   },
   {
     name: "Monster Trucks/Construction",
@@ -429,6 +479,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "lifeSkills",
     style: "Themed",
     description: "Fall: monster trucks. Spring: construction sites. Themed building and play.",
+    interests: ["building", "outdoors"],
   },
   {
     name: "Fine Motor/Handwriting",
@@ -437,6 +488,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "lifeSkills",
     style: "Skill-building",
     description: "Scissor skills, coloring, Handwriting Without Tears.",
+    interests: ["art"],
   },
   {
     name: "Cursive Handwriting",
@@ -446,6 +498,7 @@ export const classes: CoopClass[] = [
     style: "Skill-building",
     description: "Handwriting Without Tears Cursive. Fine motor + writing practice.",
     stepsUpFrom: ["Fine Motor/Handwriting"],
+    interests: ["art"],
   },
 
   // === LITERACY ENRICHMENT ===
@@ -456,6 +509,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "literacy",
     style: "Passive + discussion",
     description: "Books read aloud, comprehension, vocabulary — with snacks.",
+    interests: ["reading"],
   },
   {
     name: "Books and Movies",
@@ -464,6 +518,7 @@ export const classes: CoopClass[] = [
     primaryDomain: "literacy",
     style: "Compare",
     description: "Read the book, watch the movie, discuss differences.",
+    interests: ["reading", "exploring"],
   },
   {
     name: "Advanced Reading",
@@ -472,5 +527,6 @@ export const classes: CoopClass[] = [
     primaryDomain: "literacy",
     style: "Skill-building",
     description: "Decoding, phonemic awareness, spelling through games.",
+    interests: ["reading", "games"],
   },
 ];

@@ -45,12 +45,12 @@ export function useStudents() {
 
   const addStudent = useCallback((student: Omit<Student, "id" | "selectedClasses">) => {
     const id = crypto.randomUUID();
-    setStudents((prev) => [...prev, { ...student, id, selectedClasses: [] }]);
+    setStudents((prev) => [...prev, { ...student, id, selectedClasses: [], interests: student.interests ?? [] }]);
     setActiveStudentId(id);
   }, []);
 
   const updateStudent = useCallback(
-    (id: string, updates: Partial<Pick<Student, "name" | "grade" | "band" | "homeCoverage" | "homeCurriculumLabel" | "maxPicks" | "previousClasses">>) => {
+    (id: string, updates: Partial<Pick<Student, "name" | "grade" | "band" | "homeCoverage" | "homeCurriculumLabel" | "maxPicks" | "previousClasses" | "interests">>) => {
       setStudents((prev) =>
         prev.map((s) => (s.id === id ? { ...s, ...updates } : s))
       );

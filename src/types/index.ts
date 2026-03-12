@@ -17,6 +17,31 @@ export interface Domain {
   icon: string;
 }
 
+export const INTEREST_KEYS = [
+  "animals",
+  "building",
+  "cooking",
+  "art",
+  "music",
+  "outdoors",
+  "sports",
+  "reading",
+  "history",
+  "experiments",
+  "games",
+  "performing",
+  "faith",
+  "exploring",
+] as const;
+
+export type InterestKey = (typeof INTEREST_KEYS)[number];
+
+export interface Interest {
+  key: InterestKey;
+  label: string;
+  emoji: string;
+}
+
 export interface CoopClass {
   name: string;
   bands: Band[];
@@ -25,6 +50,7 @@ export interface CoopClass {
   style: string;
   description: string;
   stepsUpFrom?: string[];
+  interests: InterestKey[];
 }
 
 export type Band = "K-2" | "2-5";
@@ -39,4 +65,5 @@ export interface Student {
   previousClasses: string[]; // last semester
   selectedClasses: string[]; // user picks
   maxPicks: number;
+  interests: InterestKey[];
 }

@@ -7,7 +7,8 @@ import { SelectionSummary } from "@/components/picker/SelectionSummary";
 import { GapWarnings } from "@/components/picker/GapWarnings";
 import { ClassBrowser } from "@/components/picker/ClassBrowser";
 import { Button } from "@/components/ui/button";
-import { Plus, HelpCircle, Pencil, Trash2 } from "lucide-react";
+import { Plus, HelpCircle, Pencil, Trash2, Heart } from "lucide-react";
+import { interests as interestData } from "@/data/interests";
 import {
   Tooltip,
   TooltipContent,
@@ -61,11 +62,12 @@ export default function Index() {
         activeId={activeStudentId}
         onSelect={setActiveStudentId}
       />
-      <div className="flex items-center gap-2">
-        <span className="text-xs text-muted-foreground">
-          {activeStudent.homeCurriculumLabel} &middot; {activeStudent.band} band
-        </span>
-        <div className="ml-auto flex gap-1">
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-muted-foreground">
+            {activeStudent.homeCurriculumLabel} &middot; {activeStudent.band} band
+          </span>
+          <div className="ml-auto flex gap-1">
           <Button
             variant="ghost"
             size="icon"
@@ -87,7 +89,21 @@ export default function Index() {
               <Trash2 className="h-3.5 w-3.5" />
             </Button>
           )}
+          </div>
         </div>
+        {activeStudent.interests.length > 0 && (
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <Heart className="h-3 w-3 text-rose-400" />
+            {activeStudent.interests.map((key) => {
+              const interest = interestData.find((i) => i.key === key);
+              return interest ? (
+                <span key={key} className="text-xs text-muted-foreground">
+                  {interest.emoji} {interest.label}
+                </span>
+              ) : null;
+            })}
+          </div>
+        )}
       </div>
       <RadarCoverageChart student={activeStudent} />
       <SelectionSummary student={activeStudent} onToggleClass={toggleClass} />

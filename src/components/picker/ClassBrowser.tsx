@@ -12,7 +12,7 @@ interface ClassBrowserProps {
 
 export function ClassBrowser({ student, onToggleClass }: ClassBrowserProps) {
   const [domainFilter, setDomainFilter] = useState<DomainKey | null>(null);
-  const filtered = useFilteredClasses(student.band, domainFilter);
+  const filtered = useFilteredClasses(student.band, domainFilter, student.interests);
   const atMax = student.selectedClasses.length >= student.maxPicks;
 
   return (
@@ -23,6 +23,11 @@ export function ClassBrowser({ student, onToggleClass }: ClassBrowserProps) {
         </h3>
         <DomainFilterBar active={domainFilter} onSelect={setDomainFilter} />
       </div>
+      {student.interests.length > 0 && (
+        <p className="text-xs text-muted-foreground -mt-2">
+          Sorted by interest match. Classes matching {student.name}'s interests appear first.
+        </p>
+      )}
       <ScrollArea className="flex-1 -mx-1 px-1">
         <div className="flex flex-col gap-2 pb-4">
           {filtered.length === 0 ? (
@@ -37,6 +42,7 @@ export function ClassBrowser({ student, onToggleClass }: ClassBrowserProps) {
                 selected={student.selectedClasses.includes(c.name)}
                 disabled={atMax}
                 isPrevious={student.previousClasses.includes(c.name)}
+                studentInterests={student.interests}
                 onToggle={() => onToggleClass(c.name)}
               />
             ))

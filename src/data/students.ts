@@ -16,6 +16,7 @@ export const defaultStudents: Student[] = [
     previousClasses: ["LEGOs", "Dogs", "Art"],
     selectedClasses: [],
     maxPicks: 3,
+    interests: ["animals", "art", "building"],
   },
   {
     id: "rowan",
@@ -30,5 +31,6 @@ export const defaultStudents: Student[] = [
     previousClasses: ["LEGOs", "Cooking/Baking", "Maker's Space"],
     selectedClasses: [],
     maxPicks: 3,
+    interests: ["cooking", "building", "art"],
   },
 ];
